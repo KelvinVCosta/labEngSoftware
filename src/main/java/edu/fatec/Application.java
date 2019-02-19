@@ -3,6 +3,7 @@ package edu.fatec;
 import edu.fatec.dto.Address;
 import edu.fatec.interfaces.CustomerRepository;
 import edu.fatec.dto.Customer;
+import java.io.File;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -43,6 +44,8 @@ public class Application implements CommandLineRunner {
         System.out.println("Customer find with findByLastName()");
         System.out.println("------------------------------------");
         System.out.println(repository.findByLastName("Costa"));
+
+        File file = new File("C:/Desenvolvimento/teste.html");
 
     }
 
