@@ -1,8 +1,6 @@
 package edu.fatec.controller;
 
-import edu.fatec.services.ExampleService;
-import edu.fatec.services.LoginForm;
-import edu.fatec.services.ResponseTransfer;
+import edu.fatec.dto.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,13 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/post")
 public class PostController {
  
-    @Autowired
-    ExampleService exampleService;
- 
     @PostMapping("/response")
     @ResponseBody
-    public ResponseTransfer postResponseController(
-      @RequestBody LoginForm loginForm) {
-        return new ResponseTransfer("Thanks For Posting!!!");
+    public String postResponseController(
+      @RequestBody Customer customer) {
+        return customer.toString() + "fake added!!!";
      }
 }
