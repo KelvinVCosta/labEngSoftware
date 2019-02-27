@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author KelvinVicenteCosta
  */
 @Controller
-@RequestMapping("/post")
 public class PostController {
  
-    @PostMapping("/response")
+    @PostMapping(path = "/post", consumes = "application/json", produces = "application/json")
     @ResponseBody
     public String postResponseController(
       @RequestBody Customer customer) {
-        return customer.toString() + "fake added!!!";
+        
+        return c.toString() + "fake added!!!";
      }
 }
