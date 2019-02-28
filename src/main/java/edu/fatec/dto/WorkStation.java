@@ -14,7 +14,7 @@ public class WorkStation {
     private String id;
     private String owner;
     private String location;
-    private List<Registro> registros;
+    private List<Log> registros;
 
     public void Workstation(String owner, String location){
         
