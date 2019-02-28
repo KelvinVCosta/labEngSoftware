@@ -1,12 +1,16 @@
 package edu.fatec.dto;
 
+import java.util.List;
+import org.springframework.data.annotation.Id;
+
 /**
  *
  * @author KelvinVicenteCosta
  */
+
 public class WorkStation {
 
-    @id
+    @Id
     private String id;
     private String owner;
     private String location;
